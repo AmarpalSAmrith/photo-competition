@@ -8,7 +8,7 @@
     <meta name="author" content="Softwire">
 
     <!-- Title -->
-    <title>Photo Competition - Home</title>
+    <title>Daily Bugle Photo Competition - Home</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
@@ -24,16 +24,17 @@
 <body>
 
 <!-- Navigation bar -->
-<nav class="navbar main-content">
-    <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-title" href="index.html">Photo Competition</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
-    </ul>
-</nav>
+<!-- Navigation bar -->
+<div id="navbar">
+    <a href="index.html" id="logo">Daily Bugle Photo Competition</a>
+    <div id="navbar-right">
+        <a class="navbar-link" href="about.html">About</a>
+    </div>
+</div>
 
 <!-- Page content -->
 <div class="main-content">
-    <h1 class="page-title">Photo Competition</h1>
+    <h1 class="page-title">Submissions</h1>
 
     <div class="image-container">
         <!-- src and alt attribute will be populated by index.js on page load -->
@@ -41,23 +42,23 @@
     </div>
 
     <div class="voting-buttons">
-        <button class="voting-button vote-up">I love it</button>
-        <button class="voting-button vote-down">I hate it</button>
+        <button class="voting-button vote-up" onclick="upVote()">I love it</button>
+        <button class="voting-button vote-down" onclick="downVote()">I hate it</button>
     </div>
 
     <table class="image-details">
         <tbody>
             <tr>
                 <td><b>Author</b></td>
-                <td>TODO: Fill in author details.</td>
+                <td id="info-author">TODO: Fill in author details.</td>
             </tr>
             <tr>
                 <td><b>Name</b></td>
-                <td>TODO: Fill in image details.</td>
+                <td id="info-image">TODO: Fill in image details.</td>
             </tr>
             <tr>
                 <td><b>Licence</b></td>
-                <td>TODO: Fill in licence details.</td>
+                <td id="info-license">TODO: Fill in licence details.</td>
             </tr>
         </tbody>
     </table>
