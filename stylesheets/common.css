@@ -18,6 +18,10 @@
     margin: 0 8px;
 }
 
+.voting-button.vote-down {
+    background-color: #f44242;
+}
+
 .image-details {
   width: 100%;
 }
