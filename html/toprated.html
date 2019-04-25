@@ -8,7 +8,7 @@
     <meta name="author" content="Softwire">
 
     <!-- Title -->
-    <title>Daily Bugle Photo Competition - Home</title>
+    <title>Daily Bugle Photo Competition - Top rated Photo</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
@@ -18,7 +18,7 @@
 
     <!-- Custom JS -->
     <script src="../js/common.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/toprated.js"></script>
 </head>
 
 <body>
@@ -35,36 +35,27 @@
 
 <!-- Page content -->
 <div class="main-content">
-    <h1 class="page-title">Submissions</h1>
-
-    <noscript>
-        Please turn on JavaScript for the best viewing experience
-    </noscript>
+    <h1 class="page-title">Top rated Photo</h1>
 
     <div class="image-container">
         <!-- src and alt attribute will be populated by index.js on page load -->
         <img id="main-image" src="">
     </div>
 
-    <div class="voting-buttons">
-        <button class="voting-button vote-up" onclick="upVote()">I love it</button>
-        <button class="voting-button vote-down" onclick="downVote()">I hate it</button>
-    </div>
-
     <table class="image-details">
         <tbody>
-            <tr>
-                <td><b>Author</b></td>
-                <td id="info-author">TODO: Fill in author details.</td>
-            </tr>
-            <tr>
-                <td><b>Name</b></td>
-                <td id="info-image">TODO: Fill in image details.</td>
-            </tr>
-            <tr>
-                <td><b>Licence</b></td>
-                <td id="info-license">TODO: Fill in licence details.</td>
-            </tr>
+        <tr>
+            <td><b>Author</b></td>
+            <td id="info-author"></td>
+        </tr>
+        <tr>
+            <td><b>Name</b></td>
+            <td id="info-image"></td>
+        </tr>
+        <tr>
+            <td><b>Licence</b></td>
+            <td id="info-license"></td>
+        </tr>
         </tbody>
     </table>
 </div>
