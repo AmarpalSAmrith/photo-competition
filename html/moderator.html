@@ -8,7 +8,7 @@
     <meta name="author" content="Softwire">
 
     <!-- Title -->
-    <title>Daily Bugle Photo Competition - Upload</title>
+    <title>Daily Bugle Photo Competition - Moderator</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
@@ -16,7 +16,7 @@
     <!-- Vendor JS -->
     <script src="../js/vendor/jquery-3.3.1.js"></script>
     <script src="../js/common.js"></script>
-    <script src="../js/upload.js"></script>
+    <script src="../js/moderator.js"></script>
 </head>
 
 <body>
@@ -34,31 +34,41 @@
 <!-- Page content -->
 <div class="main-content">
 
-    <h1 class="page-title">Upload</h1>
+    <h1 class="page-title">Moderator</h1>
+    <br>
     <div>
-        <form >
-            File Path:
+        <h2 class="sub-title">Moderator Login</h2>
+    </div>
+    <div>
+        <form>
+            UserName:
             <br>
-            <input id="filepath" type="file" class="form-input">
-            <br> <br>
-            Image Name:
+            <input id="username" type="text" class="form-input">
             <br>
-            <input id="imgname" type="text" class="form-input">
-            <br> <br>
-            Author:
             <br>
-            <input id="author" type="text" class="form-input">
-            <br><br>
-            License:
+            Password:
             <br>
-            <input id="license" type="text" class="form-input">
-            <br> <br>
-            <button type="button" onclick="uploadImage()">Upload</button>
-            <button type="button" onclick="reloadPage()">Clear Form</button>
+            <input id="password" type="password" class="form-input">
+            <br>
+            <br>
+            <!--<button type="button" onclick=""></button>-->
         </form>
     </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image thumbnail</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
 
-
+            </tbody>
+        </table>
+    </div>
 </div>
 
 </body>

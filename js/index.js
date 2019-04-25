@@ -44,7 +44,7 @@ function downVote() {
     fetch(buildUrl('/id/' + imageId + '/vote/down'),{method:'post'})
         .then(function (response) {
             if (response.status !== 204) {
-                throw new Error ('Request returned status code !== 204: ' + response.status + '-')
+                    throw new Error ('Request returned status code !== 204: ' + response.status + '-')
             }
             loadRandomImage();
         })
