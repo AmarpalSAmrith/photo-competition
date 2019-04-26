@@ -29,6 +29,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
+    <link rel="stylesheet" href="../stylesheets/upload.css">
 
     <!-- Vendor JS -->
     <script src="../js/vendor/jquery-3.3.1.js"></script>
@@ -53,31 +54,51 @@
 <div class="main-content">
 
     <h1 class="page-title">Upload</h1>
-    <div>
-        <form >
-            File Path:
-            <br>
-            <input id="filepath" type="file" class="form-input">
-            <br> <br>
-            Image Name:
-            <br>
-            <input id="imgname" type="text" class="form-input">
-            <br> <br>
-            Author:
-            <br>
-            <input id="author" type="text" class="form-input">
-            <br><br>
-            License:
-            <br>
-            <input id="license" type="text" class="form-input">
-            <br> <br>
-            <button type="button" onclick="uploadImage()">Upload</button>
-            <button type="button" onclick="reloadPage()">Clear Form</button>
-        </form>
-    </div>
 
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Upload</button>
 
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="../images/upload.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="filepath"><b>Username</b></label>
+            <input placeholder="Enter Username" name="uname" required id="filepath" type="file">
+
+            <label for="imgname"><b>Image Name</b></label>
+            <input type="text" placeholder="Image Name" name="psw" id="imgname" required>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" placeholder="Author" name="psw" id="author" required>
+
+            <label for="license"><b>License</b></label>
+            <input type="text" placeholder="License" name="psw" id="license" required>
+
+            <button type="button" onclick="uploadImage(); document.getElementById('id01').style.display='none'">Upload</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </form>
 </div>
 
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
 </body>
 </html>

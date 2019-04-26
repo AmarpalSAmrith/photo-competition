@@ -18,10 +18,15 @@ function thumbnails () {
             for (var i = 0; i < json.length; i++) {
                 $('#table-body').append(`
                     <tr>
-                        <td><img src="data:image/png;base64, ${json[i].thumbnail}"/></td>
+                        <td>
+                            <div class="container">
+                                <img src="data:image/png;base64, ${json[i].thumbnail}"/>
+                                <button class="btn" onclick="deleteImage(${json[i].id})">Delete</button>
+                             </div>
+
+                        </td>
                         <td>${json[i].name}</td>
                         <td>${json[i].author}</td>
-                        <td><button onclick="deleteImage(${json[i].id})">Delete</button></td>
                     </tr>
                 `);
             }

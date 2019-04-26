@@ -29,6 +29,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
+    <link rel="stylesheet" href="../stylesheets/moderator.css">
 
     <!-- Vendor JS -->
     <script src="../js/vendor/jquery-3.3.1.js"></script>
@@ -61,12 +62,12 @@
         <form>
             UserName:
             <br>
-            <input id="username" type="text" class="form-input">
+            <input id="username" type="text" class="form-input" placeholder="UserName">
             <br>
             <br>
             Password:
             <br>
-            <input id="password" type="password" class="form-input">
+            <input id="password" type="password" class="form-input" placeholder="Password">
             <br>
             <br>
             <!--<button type="button" onclick=""></button>-->
@@ -77,9 +78,8 @@
             <thead>
                 <tr>
                     <th>Image thumbnail</th>
-                    <th>Title</th>
+                    <th id="th-title">Title</th>
                     <th>Author</th>
-                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody id="table-body">

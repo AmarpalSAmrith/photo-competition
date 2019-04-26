@@ -1,10 +1,34 @@
 .image-container, #main-image {
   width: 100%;
 }
-
 .image-container, #my-image {
   width: 100%;
-  padding-bottom: 10px;
+}
+
+.image-container {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
 }
 
 .voting-buttons {
@@ -14,12 +38,55 @@
 }
 
 .voting-button {
-    padding: 8px;
-    margin: 0 8px;
+        border-radius: 4px;
+        /*background-color: #f4511e;*/
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+}
+.voting-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
+.voting-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.voting-button:hover span {
+  padding-right: 25px;
+}
+
+.voting-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 .voting-button.vote-down {
-    background-color: #f44242;
+    background-color: #ff0000;
+  }
+.voting-button.vote-up {
+    background-color: #4CAF50;
+}
+
+.voting-button.vote-up:hover {
+    background-color: #419945;
+}
+
+.voting-button.vote-down:hover {
+    background-color: #ce0202;
 }
 
 .image-details {
@@ -29,7 +96,7 @@
 /* Create a sticky/fixed navbar */
 #navbar {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #000000;
   padding: 60px 10px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
@@ -41,7 +108,7 @@
 /* Style the navbar links */
 #navbar a {
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -59,7 +126,7 @@
 
 /* Links on mouse-over */
 #navbar a:hover {
-  background-color: #ddd;
+  background-color: #ff0000;
   color: black;
 }
 
@@ -90,17 +157,25 @@
   }
 }
 
+.page-title {
+    color: white;
+}
+
 body {
   margin: 0;
-  background-color: cornsilk;
+  background-color: ;
   font-family: Arial, Serif;
-  /*background-image: url("../images/IMG_5904.jpg");*/
+  background-image: url("../images/IMG_5904.jpg");
   /*background-size: ;*/
 }
 
 .main-content {
   width: 100%;
   max-width: 800px;
-  margin: 230px auto 0;
+  margin: 160px auto 0;
   padding: 0 24px;
+  padding-top: 20px;
+  background-color: #840000;
+  color: white;
+  padding-bottom:20px;
 }
