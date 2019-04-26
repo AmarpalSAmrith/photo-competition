@@ -29,6 +29,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../stylesheets/common.css">
+    <link rel="stylesheet" href="../stylesheets/about.css">
 
     <!-- Vendor JS -->
     <script src="../js/vendor/jquery-3.3.1.js"></script>
@@ -53,22 +54,47 @@
 
         <h1 class="page-title">About</h1>
 
-        <div class="about">
+
+
+        <button class="accordion">About Me</button>
+        <div class="panel">
             <p>Hi, I'm Amarpal.</p>
             <p> I like cars, engines and jet engines...preferably with high power outputs</p>
-            <p>This is me, about to enjoy a coconut in Tanzania...</p>
+        </div>
 
-        </div>
-        <div class="image-container">
-            <img id="my-image" src="../images/IMG_1565%203.JPG" alt="Authors Image">
-        </div>
-        <div>
-            <h2 class="sub-heading">Achievements</h2>
+        <button class="accordion">Acheivements</button>
+        <div class="panel">
             <p> Managed to get this navbar to be funky</p>
             <p>Allergic to cats</p>
+        </div>
 
+        <button class="accordion">What I look Like</button>
+        <div class="panel">
+            <div class="image-container">
+                <img id="my-image" src="../images/IMG_1565%203.JPG" alt="Authors Image">
+                <div class="overlay">
+                    <p>This is me, about to enjoy a coconut in Tanzania...</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
 </html>

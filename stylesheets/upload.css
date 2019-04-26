@@ -10,6 +10,9 @@ input[type=text], input[type=file] {
   box-sizing: border-box;
 }
 
+.upload-button {
+    align: center;
+}
 /* Set a style for all buttons */
 button {
   background-color: #4CAF50;
